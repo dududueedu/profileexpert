@@ -1,5 +1,6 @@
 import './style.css';
 import React from 'react';
+import gitHub from './image/img-github.jpg'
 
 function App() {
   return (
@@ -11,8 +12,17 @@ function App() {
       <form className="form-group">
         <div className="input-group">
           <input type="text" className="form-control" required/>
-        </div>
+          <span className="input-group-btn">
+            <button className="btn btn-success" type="submit">
+              Seach
+            </button>
+          </span> 
+        </div>          
       </form>
+
+      <div className="py-5">
+        <img src={gitHub} className="responsive rounded-circle" alt="img-git" height="182px"/>
+      </div>
     </div>
   );
 }
