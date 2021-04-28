@@ -6,17 +6,16 @@ function App() {
   return (
     <div className="container text-center">
       <h1 className="py-5 text-uppercase">
-        Bem vindo!
+        bem vindo!
       </h1>
 
       <form className="form-group">
         <div className="input-group">
           <input type="text" className="form-control" required/>
-          <span className="input-group-btn">
-            <button className="btn btn-success" type="submit">
-              Seach
-            </button>
-          </span> 
+          
+          <button className="btn btn-success" type="submit">
+            Seach
+          </button> 
         </div>          
       </form>
 
