@@ -19,7 +19,7 @@ function App() {
         </div>          
       </form>
 
-      <div className="py-5">
+      <div className="py-4">
         <img src={gitHub} className="responsive rounded-circle" alt="img-git" height="182px"/>
       </div>
     </div>
