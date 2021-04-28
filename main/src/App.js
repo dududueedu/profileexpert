@@ -1,17 +1,28 @@
 import './style.css';
-import React from 'react';
+import React, { useState } from 'react';
 import gitHub from './image/img-github.jpg'
 
 function App() {
+  const [search, setSearch] = useState('Edu') //control estado
+  
+  const handleSubmit = (e) => {
+    e.preventDefault()
+  }
+
+  const handleOnchange = (ev) => { //onchange ocorre quando o valor de um elemento é alterado.
+    console.log(ev.target.value)
+    setSearch(ev.target.value)
+  } 
+
   return (
     <div className="container text-center">
       <h1 className="py-5 text-uppercase">
         bem vindo!
       </h1>
 
-      <form className="form-group">
+      <form className="form-group" onSubmit={handleSubmit}>
         <div className="input-group">
-          <input type="text" className="form-control" required/>
+          <input type="text" className="form-control" value={search} required onChange={handleOnchange}/>
           
           <button className="btn btn-success" type="submit">
             Seach
