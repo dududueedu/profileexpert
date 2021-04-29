@@ -3,7 +3,7 @@ import React, { useState } from 'react';
 import gitHub from './image/img-github.jpg'
 
 function App() {
-  const [search, setSearch] = useState('Edu') //control estado
+  const [search, setSearch] = useState('') //control estado
   
   const handleSubmit = (e) => {
     e.preventDefault()
@@ -22,7 +22,8 @@ function App() {
 
       <form className="form-group" onSubmit={handleSubmit}>
         <div className="input-group">
-          <input type="text" className="form-control" value={search} required onChange={handleOnchange}/>
+          <input type="text" className="form-control" placeholder="Digite seu nome de usuário" 
+              value={search} required onChange={handleOnchange}/>
           
           <button className="btn btn-success" type="submit">
             Seach
