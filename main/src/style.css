@@ -9,3 +9,8 @@
 #root{
     height: 100vh;
 }
+
+.info-pro{
+    margin-top: 7px;
+    font-style: italic;
+}

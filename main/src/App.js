@@ -45,14 +45,15 @@ function App() {
         {userName && (
           <div>
             <img src={userName.avatar_url} className="responsive rounded-circle" alt="img-git" height="182px"/>
-            <h3 className="py-3"> 
-              Usuário: <a href={userName.html_url} target="_new"> {userName.name} </a>
+            <p className="info-pro"> Informações: </p>
+            <h3> 
+              <a href={userName.html_url} target="_new"> {userName.name} </a>
             </h3>
-            Sobre: <span className="text-info"> {userName.bio} </span>
+            <span className="text-info"> {userName.bio} </span>
             <p className="py-3">
-              Site: <a href={userName.blog} target="_new" className="text-info"> {userName.blog} </a>
+              <a href={userName.blog} target="_new" className="text-info"> {userName.blog} </a>
             </p> 
-            Localização: <span className="text-info"> {userName.location} </span>
+            <span className="text-info"> {userName.location} </span>
         </div>
         )}
       </div>  
