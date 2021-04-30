@@ -38,16 +38,23 @@ function App() {
       </form>
 
       <div className="py-4">
-        <img src={gitHub} className="responsive rounded-circle" alt="img-git" height="182px"/>
-      </div>
-
-      <h3 className="py-0">
-        <a href="https://github.com/dududueedu" target="_new"> dududueedu </a>
-      </h3>
-      <span>Quixadá</span>
-      <p className="py-1">
-        <a href="https://www.facebook.com/" target="_new" className="text-info">drew</a>
-      </p>    
+        {!userName && (
+          <img src={gitHub} className="responsive rounded-circle" alt="img-git" height="182px"/>
+        )}
+        
+        {userName && (
+          <div>
+            <img src={gitHub} className="responsive rounded-circle" alt="img-git" height="182px"/>
+            <h3 className="py-0">
+              <a href="https://github.com/dududueedu" target="_new"> dududueedu </a>
+            </h3>
+            <span>Quixadá</span>
+            <p className="py-1">
+              <a href="https://www.facebook.com/" target="_new" className="text-info">drew</a>
+            </p> 
+        </div>
+        )}
+      </div>  
     </div>
   );
 }
