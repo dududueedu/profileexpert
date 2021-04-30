@@ -3,11 +3,17 @@ import React, { useState } from 'react';
 import gitHub from './image/img-github.jpg'
 
 function App() {
-  const [search, setSearch] = useState('') //control estado
+  const [search, setSearch] = useState('') //control state
+  const [userName, setUserName] = useState() //control state
   
   const handleSubmit = (e) => {
     e.preventDefault()
+    fetch(`https://api.github.com/users/${search}`) //function request HTTP
+      .then(response => response.json())
+      .then(userResponse => setUserName(userResponse))
   }
+
+  console.log(userName)
 
   const handleOnchange = (ev) => { //onchange ocorre quando o valor de um elemento é alterado.
     console.log(ev.target.value)
@@ -17,7 +23,7 @@ function App() {
   return (
     <div className="container text-center">
       <h1 className="py-5 text-uppercase">
-        bem vindo!
+        seja bem vindo!
       </h1>
 
       <form className="form-group" onSubmit={handleSubmit}>
