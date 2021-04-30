@@ -37,21 +37,21 @@ function App() {
         </div>          
       </form>
 
-      <div className="py-4">
+      <div className="py-4"> 
         {!userName && (
           <img src={gitHub} className="responsive rounded-circle" alt="img-git" height="182px"/>
         )}
         
         {userName && (
           <div>
-            <img src={gitHub} className="responsive rounded-circle" alt="img-git" height="182px"/>
-            <h3 className="py-0">
-              <a href="https://github.com/dududueedu" target="_new"> dududueedu </a>
+            <img src={userName.avatar_url} className="responsive rounded-circle" alt="img-git" height="182px"/>
+            <h3 className="py-3">
+              <a href="https://github.com/dududueedu" target="_new"> {userName.name} </a>
             </h3>
-            <span>Quixadá</span>
-            <p className="py-1">
-              <a href="https://www.facebook.com/" target="_new" className="text-info">drew</a>
+            <p className="py-3">
+              <a href="https://www.facebook.com/" target="_new" className="text-info"> {userName.blog} </a>
             </p> 
+            <span> {userName.location} </span>
         </div>
         )}
       </div>  
