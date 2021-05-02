@@ -13,8 +13,6 @@ function App() {
       .then(userResponse => setUserName(userResponse))
   }
 
-  console.log(userName)
-
   const handleOnchange = (ev) => { //onchange ocorre quando o valor de um elemento é alterado.
     console.log(ev.target.value)
     setSearch(ev.target.value)
